@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "singularName": "author",
+    "pluralName": "authors",
+    "displayName": "author",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "artworks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artwork.artwork",
+      "mappedBy": "authors"
+    }
+  }
+}

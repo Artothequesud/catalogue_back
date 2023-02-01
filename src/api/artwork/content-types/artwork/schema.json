@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artworks",
+  "info": {
+    "singularName": "artwork",
+    "pluralName": "artworks",
+    "displayName": "artwork",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::author.author",
+      "inversedBy": "artworks"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "artworks"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::collection.collection",
+      "inversedBy": "artworks"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "size": {
+      "type": "json"
+    },
+    "id_artotheque": {
+      "type": "uid",
+      "required": true
+    },
+    "processes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::process.process",
+      "inversedBy": "artworks"
+    }
+  }
+}

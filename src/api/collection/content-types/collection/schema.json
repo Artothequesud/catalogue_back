@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "collection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "artworks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artwork.artwork",
+      "mappedBy": "collections"
+    }
+  }
+}

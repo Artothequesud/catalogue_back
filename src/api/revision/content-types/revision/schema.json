@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "revisions",
+  "info": {
+    "singularName": "revision",
+    "pluralName": "revisions",
+    "displayName": "revision"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rev": {
+      "type": "uid"
+    }
+  }
+}
